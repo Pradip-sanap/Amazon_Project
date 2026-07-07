@@ -5,6 +5,7 @@ public enum Status {
     VERIFIED,
     PASSWORD_CREATED,
     ACTIVE,
+    DEACTIVE,
     BLOCKED,
     SUSPENDED
 }

@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -29,6 +30,10 @@ public class UserResponseDto {
     private Role role;
 
     private Status status;
+
+    private Integer age;
+
+    private LocalDate DoB;
 
     private LocalDateTime createdAt;
 

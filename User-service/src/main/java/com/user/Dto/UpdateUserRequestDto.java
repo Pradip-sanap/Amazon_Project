@@ -14,35 +14,28 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UserRequestDto {
-    // @NotBlank = @NotNull + @NotEmpty
-    @NotBlank
-    @Size(max = 50, message = "Max char should be less than 5")
+public class UpdateUserRequestDto {
+
+    @Size(min = 3, max = 50)
     private String firstName;
 
-    @NotBlank
-    @Size(max = 50, message = "Max char should be less than 5")
+    @Size(min = 3, max = 50)
     private String lastName;
 
-    @NotBlank
-    @Email()
+    @Email
     private String email;
 
-    @NotBlank
     @Pattern(regexp = "^[0-9]{10}$", message = "Invalid PhoneNumber" )
     private String phone;
 
-    @NotNull(message = "Role is required")
     private Role role;
 
-    @NotNull(message = "Age is required")
     @Positive
     @Min(value = 18, message = "Age must be >= 18")
     @Max(value = 100, message = "Age must be <= 100")
     private Integer age;
 
-    @NotNull(message = "Date of birth is required")
     @Past(message = "Birthdate must be in the past")
-//    @Pattern(regexp = "^\\d{4}-\\d{2}-\\d{2}$", message = "Date must be in YYYY-MM-DD format")
     private LocalDate DoB;
 }
+

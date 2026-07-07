@@ -4,18 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ErrorResponse {
+@Builder
+public class RegisterSuccessDto {
 
-    private LocalDateTime timeStamp;
-    private String error;
+    private UUID id;
+
     private String message;
-    private String path;
 }
